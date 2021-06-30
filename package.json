@@ -1,0 +1,42 @@
+{
+  "name": "notion-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./bin/www.js",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Learn-a-new-language/notion-api.git"
+  },
+  "author": "Vincent Bollaert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Learn-a-new-language/notion-api/issues"
+  },
+  "homepage": "https://github.com/Learn-a-new-language/notion-api#readme",
+  "type": "module",
+  "dependencies": {
+    "@notionhq/client": "^0.1.9",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
