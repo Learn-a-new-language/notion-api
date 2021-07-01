@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/bin/www.js",
+    "start": "node ./src/bin/www.js",
+    "develop": "nodemon ./src/bin/www.js",
     "commit": "cz"
   },
   "repository": {
