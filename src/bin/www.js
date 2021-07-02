@@ -20,7 +20,7 @@ app.set('port', port)
 // var server = http.createServer(app)
 
 app.listen(port, () => {
-  console.log(`listening on port ${PORT}`)
+  console.log(`listening on port ${port}`)
 })
 /**
  * Listen on provided port, on all network interfaces.
