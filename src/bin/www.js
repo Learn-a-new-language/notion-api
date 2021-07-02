@@ -17,19 +17,16 @@ app.set('port', port)
  * Create HTTP server.
  */
 
-// var server = http.createServer(app)
+var server = http.createServer(app)
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`)
-})
 /**
  * Listen on provided port, on all network interfaces.
  */
 
 
-// server.listen(port)
-// server.on('error', onError)
-// server.on('listening', onListening)
+server.listen(port)
+server.on('error', onError)
+server.on('listening', onListening)
 
 /**
  * Normalize a port into a number, string, or false.
@@ -81,8 +78,8 @@ function onError(error) {
  * Event listener for HTTP server "listening" event.
  */
 
-// function onListening() {
-//   var addr = server.address()
-//   var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port
-//   debug('learn-german:server')('Listening on ' + bind)
-// }
+function onListening() {
+  var addr = server.address()
+  var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port
+  debug('learn-german:server')('Listening on ' + bind)
+}
