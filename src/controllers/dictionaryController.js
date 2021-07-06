@@ -6,8 +6,8 @@ export function getDictionary(req, res) {
       database_id: process.env.NOTION_DICTIONARY_ID,
     })
     .then(({ results }) => {
-      const indexes = new Array(Number(req.query.length)).fill().reduce((acc, cur) => {
-        const randomWordIndex = Math.floor(Math.random() * (results.length - 0 + 1) + 0)
+      const randomSelection = new Array(Number(req.query.length)).fill().reduce((acc, cur) => {
+        const randomWordIndex = Math.floor(Math.random() * results.length)
         const {
           properties: { word, meaning },
         } = results[randomWordIndex]
@@ -21,6 +21,6 @@ export function getDictionary(req, res) {
         ]
       }, [])
 
-      return res.send({ data: indexes })
+      return res.send({ data: randomSelection })
     })
 }
