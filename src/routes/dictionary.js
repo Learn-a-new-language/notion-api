@@ -1,6 +1,6 @@
 import express from 'express'
-import { getDictionary } from '../controllers/dictionaryController.js'
+import { getDictionary, updateDictionary } from '../controllers/dictionaryController.js'
 
 export const router = express.Router()
 
-router.route('/').get(getDictionary)
+router.route('/').get(getDictionary).patch(updateDictionary)
